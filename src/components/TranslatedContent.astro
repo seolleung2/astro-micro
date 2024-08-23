@@ -1,0 +1,12 @@
+---
+// src/components/TranslatedContent.astro
+import { translateText } from "../utils/deepl.js";
+
+const { content } = Astro.props;
+
+const translatedContent = await translateText(content);
+---
+
+<div>
+  <p>{translatedContent}</p>
+</div>
